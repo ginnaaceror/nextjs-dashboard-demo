@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Dashboard Demo
 
-## Getting Started
+Dashboard de transacciones construido con Next.js 15.
 
-First, run the development server:
+## 🚀 Características
+
+- ✅ Consumo de API REST
+- ✅ Manejo profesional de errores
+- ✅ Server Components de Next.js 15
+- ✅ Diseño responsive con Tailwind CSS
+- ✅ Arquitectura modular y escalable
+
+## 🛠️ Tecnologías
+
+- **Next.js 15.5.6** - Framework de React con App Router
+- **React 19** - Biblioteca de UI
+- **Tailwind CSS 4** - Framework de estilos
+- **JavaScript** - Lenguaje de programación
+
+## 📦 Instalación
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/nextjs-dashboard-demo.git
+
+# Entrar al directorio
+cd nextjs-dashboard-demo
+
+# Instalar dependencias
+pnpm install
+# o
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ▶️ Ejecución
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+# Modo desarrollo
+pnpm dev
+# o
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# El proyecto estará disponible en http://localhost:3000
+```
 
-## Learn More
+## 📁 Estructura del Proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── page.js           # Página principal
+│   ├── layout.js         # Layout global
+│   └── globals.css       # Estilos globales
+├── lib/
+│   ├── api.js           # Funciones para consumir la API
+│   └── config.js        # Configuración centralizada
+└── components/
+    └── ErrorBoundary.jsx # Componente de manejo de errores
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏗️ Arquitectura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Server Components
 
-## Deploy on Vercel
+El proyecto utiliza **Server Components** de Next.js 15 para:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Mejor rendimiento (fetch en el servidor)
+- Menos JavaScript enviado al cliente
+- SEO optimizado
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Separación de responsabilidades
+
+- **`api.js`** - Lógica de peticiones HTTP
+- **`config.js`** - Configuración centralizada
+- **`ErrorBoundary.jsx`** - UI de errores
+- **`page.js`** - Orquestación y renderizado
+
+### Manejo de errores
+
+- Try/catch en Server Components
+- Mensajes de error claros al usuario
+- Fallback UI cuando la API falla
+
+## 🎨 Decisiones de Diseño
+
+1. **Server Components por defecto** - Más rápido y eficiente
+2. **Client Components solo cuando es necesario** - ErrorBoundary usa "use client" para interactividad
+3. **Tailwind CSS** - Estilos consistentes y mantenibles
+4. **Configuración modular** - Fácil de cambiar URLs y parámetros
+
+## 🌐 Deploy
+
+El proyecto está desplegado en Vercel:
+
+**[Ver Demo en Vivo](https://tu-proyecto.vercel.app)** _(Actualizar después del deploy)_
