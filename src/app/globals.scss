@@ -11,6 +11,15 @@ body {
   overflow-y: auto;
 }
 
+.material-icons,
+.material-symbols-outlined {
+  font-display: block;
+
+  &:not(:defined) {
+    visibility: hidden;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
