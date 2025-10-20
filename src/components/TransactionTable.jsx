@@ -54,7 +54,6 @@ export default function TransactionTable({ transactions, period }) {
   const tableHeaderBase =
     "px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-light";
   const tableHeaderLeft = `${tableHeaderBase} text-left`;
-  const tableHeaderRight = `${tableHeaderBase} text-right`;
   const tableCellBase = "px-4 py-4";
 
   const filteredTransactions = transactions.filter((transaction) =>
@@ -98,7 +97,7 @@ export default function TransactionTable({ transactions, period }) {
                 <th className={`${tableHeaderLeft} w-[26%]`}>
                   ID transacción Bold
                 </th>
-                <th className={`${tableHeaderRight} w-[20%]`}>Monto</th>
+                <th className={`${tableHeaderLeft} w-[20%]`}>Monto</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-light">
@@ -118,7 +117,7 @@ export default function TransactionTable({ transactions, period }) {
                     onClick={() => handleTransactionClick(transaction)}
                     className="hover:bg-gray-light cursor-pointer transition-colors"
                   >
-                    <td className={`${tableCellBase} w-[18%]`}>
+                    <td className={`${tableCellBase}`}>
                       <div className="flex items-center gap-2 overflow-hidden">
                         <div className="flex-shrink-0">
                           {getTransactionIcon(transaction)}
@@ -129,15 +128,13 @@ export default function TransactionTable({ transactions, period }) {
                       </div>
                     </td>
 
-                    <td
-                      className={`${tableCellBase} text-sm text-gray-600 w-[18%]`}
-                    >
+                    <td className={`${tableCellBase} text-sm text-gray-600`}>
                       <div className="truncate">
                         {formatDate(transaction.createdAt)}
                       </div>
                     </td>
 
-                    <td className={`${tableCellBase} w-[18%]`}>
+                    <td className={`${tableCellBase}`}>
                       <div className="flex items-center gap-2 overflow-hidden">
                         <div className="flex-shrink-0">
                           {getPaymentIcon(transaction)}
@@ -148,15 +145,13 @@ export default function TransactionTable({ transactions, period }) {
                       </div>
                     </td>
 
-                    <td
-                      className={`${tableCellBase} text-sm text-gray-600 w-[26%]`}
-                    >
+                    <td className={`${tableCellBase} text-sm text-gray-600`}>
                       <div className="truncate" title={transaction.id}>
                         {transaction.id}
                       </div>
                     </td>
 
-                    <td className={`${tableCellBase} text-right w-[20%]`}>
+                    <td className={`${tableCellBase} w-[20%]`}>
                       <div>
                         <div className="text-sm font-semibold text-gray-dark">
                           {formatCurrency(transaction.amount)}
