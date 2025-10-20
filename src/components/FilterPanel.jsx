@@ -49,7 +49,7 @@ export default function FilterPanel({ filters, onFilterChange }) {
         className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-light rounded-lg hover:bg-gray-light transition-colors"
       >
         <span className="text-sm font-medium text-gray-dark">Filtrar</span>
-        <span className="material-icons text-lg">tune</span>
+        <span className="material-icons text-lg text-bold-blue">tune</span>
       </button>
 
       {isOpen && (

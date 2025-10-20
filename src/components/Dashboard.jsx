@@ -100,7 +100,7 @@ export default function Dashboard({ initialTransactions = [] }) {
             />
           </div>
 
-          <div className="lg:col-span-2 flex flex-col justify-start items-start lg:items-end gap-4">
+          <div className="lg:col-span-2 flex flex-col justify-start items-end gap-4">
             <DateFilter
               activeFilter={dateFilter}
               onFilterChange={setDateFilter}

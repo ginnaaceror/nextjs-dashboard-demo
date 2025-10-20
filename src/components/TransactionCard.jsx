@@ -81,7 +81,7 @@ export default function TransactionCard({ total, period, transactions }) {
 
       <div className="bg-white px-6 py-8 text-center">
         <div className="mb-3">
-          <p className="text-3xl md:text-4xl font-bold text-gray-900">
+          <p className="text-3xl md:text-4xl font-bold text-gradient">
             {formatCurrency(total)}
           </p>
         </div>
