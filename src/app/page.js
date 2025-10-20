@@ -1,18 +1,15 @@
 import { getData } from "@/lib/api";
 import ErrorDisplay from "@/components/ErrorBoundary";
+import Dashboard from "@/components/Dashboard";
 
 export default async function Page() {
   try {
-    await getData("");
+    const data = await getData("");
 
-    return (
-      <div>
-        <h1>Dashboard de Transacciones</h1>
-      </div>
-    );
+    return <Dashboard initialTransactions={data.data || []} />;
   } catch (error) {
     return (
-      <div>
+      <div className="min-h-screen bg-[#f6f4f9] flex items-center justify-center p-4">
         <ErrorDisplay error={error} />
       </div>
     );

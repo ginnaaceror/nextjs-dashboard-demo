@@ -9,7 +9,7 @@ export default function NavBar() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className="w-full bg-gradient-to-r from-bold-blue to-bold-red px-6 py-4 shadow-md relative">
+    <header className="w-full bg-gradient px-6 py-4 shadow-md relative">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <Image

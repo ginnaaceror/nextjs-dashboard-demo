@@ -1,0 +1,41 @@
+@use "@/styles/colors.scss";
+@use "tailwindcss";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-y: auto;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn-primary {
+  @apply text-white hover:text-gray-light transition-colors text-sm font-medium;
+}
+
+.input-checkbox {
+  @apply w-4 h-4 rounded border-gray-light text-bold-blue focus:ring-bold-blue cursor-pointer;
+}
+
+.label-checkbox {
+  @apply flex items-center gap-3 cursor-pointer;
+}
+
+.bg-gradient {
+  @apply bg-gradient-to-r from-bold-blue to-bold-red;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-bold-blue to-bold-red bg-clip-text text-transparent;
+}
