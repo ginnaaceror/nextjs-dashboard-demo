@@ -88,21 +88,19 @@ export default function TransactionTable({ transactions, period }) {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[800px]">
-          <thead className="bg-gray-50 border-b border-gray-light">
-            <tr>
-              <th className={`${tableHeaderLeft} w-[18%]`}>Transacción</th>
-              <th className={`${tableHeaderLeft} w-[18%]`}>Fecha y hora</th>
-              <th className={`${tableHeaderLeft} w-[18%]`}>Método de pago</th>
-              <th className={`${tableHeaderLeft} w-[26%]`}>
-                ID transacción Bold
-              </th>
-              <th className={`${tableHeaderRight} w-[20%]`}>Monto</th>
-            </tr>
-          </thead>
-        </table>
         <div className="max-h-[600px] overflow-y-auto">
           <table className="w-full min-w-[800px]">
+            <thead className="bg-gray-light border-b border-gray-light sticky top-0 z-10">
+              <tr>
+                <th className={`${tableHeaderLeft} w-[18%]`}>Transacción</th>
+                <th className={`${tableHeaderLeft} w-[18%]`}>Fecha y hora</th>
+                <th className={`${tableHeaderLeft} w-[18%]`}>Método de pago</th>
+                <th className={`${tableHeaderLeft} w-[26%]`}>
+                  ID transacción Bold
+                </th>
+                <th className={`${tableHeaderRight} w-[20%]`}>Monto</th>
+              </tr>
+            </thead>
             <tbody className="bg-white divide-y divide-gray-light">
               {filteredTransactions.length === 0 ? (
                 <tr>
@@ -120,7 +118,6 @@ export default function TransactionTable({ transactions, period }) {
                     onClick={() => handleTransactionClick(transaction)}
                     className="hover:bg-gray-light cursor-pointer transition-colors"
                   >
-                    {/* Columna: Transacción (estado) */}
                     <td className={`${tableCellBase} w-[18%]`}>
                       <div className="flex items-center gap-2 overflow-hidden">
                         <div className="flex-shrink-0">
