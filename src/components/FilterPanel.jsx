@@ -35,6 +35,13 @@ export default function FilterPanel({ filters, onFilterChange }) {
   const handleTogglePanel = () => setIsOpen(!isOpen);
   const handleClosePanel = () => setIsOpen(false);
 
+  const hasActiveFilters =
+    filters.dataphone || filters.paymentLink || filters.all;
+
+  const applyButtonClasses = hasActiveFilters
+    ? "w-full mt-4 py-2 rounded-full text-sm font-medium transition-all bg-bold-red text-white hover:shadow-lg cursor-pointer"
+    : "w-full mt-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-300 text-gray-500 cursor-not-allowed";
+
   return (
     <div className="relative" ref={panelRef}>
       <button
@@ -92,7 +99,8 @@ export default function FilterPanel({ filters, onFilterChange }) {
 
             <button
               onClick={handleClosePanel}
-              className="w-full mt-4 py-2 bg-bold-red text-white rounded-full text-sm font-medium hover:shadow-lg transition-shadow"
+              disabled={!hasActiveFilters}
+              className={applyButtonClasses}
             >
               Aplicar
             </button>
