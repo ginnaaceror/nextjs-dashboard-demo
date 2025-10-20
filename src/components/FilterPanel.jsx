@@ -53,7 +53,7 @@ export default function FilterPanel({ filters, onFilterChange }) {
             </h3>
 
             <div className="space-y-3">
-              <label className="label-checkbox">
+              <label className="label-checkbox  group">
                 <input
                   type="checkbox"
                   checked={filters.dataphone}
@@ -65,7 +65,7 @@ export default function FilterPanel({ filters, onFilterChange }) {
                 </span>
               </label>
 
-              <label className="label-checkbox">
+              <label className="label-checkbox  group">
                 <input
                   type="checkbox"
                   checked={filters.paymentLink}
@@ -77,7 +77,7 @@ export default function FilterPanel({ filters, onFilterChange }) {
                 </span>
               </label>
 
-              <label className="label-checkbox">
+              <label className="label-checkbox  group">
                 <input
                   type="checkbox"
                   checked={filters.all}
